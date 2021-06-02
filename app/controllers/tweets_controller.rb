@@ -4,8 +4,9 @@ class TweetsController < ApplicationController
   
     def index
       #@tweets = Tweet.includes(:user).order("created_at DESC")
-      query = "SELECT * FROM tweets"
-      @tweets = tweet.find_by_sql(query)
+      #query = "SELECT * FROM tweets"
+      #@tweet = tweet.find_by_sql(query)
+      @tweets = Tweet.all
     end
   
     def new
